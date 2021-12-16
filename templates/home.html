@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+ <div class="header">
+     <h1>Welcome Y2s!</h1>
+    <p>How truthful can you really be?</p>
+  </div>
+
+<div class="topnav">
+  <a class="active" href="/">Home</a>
+  <a href="/confessions">Confessions</a>
+  <a href="/letter">Write</a>
+  <a href="/letters">Read</a>
+</div>
+
+<h1 class ="h1">Meet Confessions</h1>
+<p class ="p1">Confess what you have been wanting to get off your chest... Perhaps (and preferably) an embarassing story that happened with you throughout MEET</p>
+
+<div class="container">
+  <form action="/", method = 'POST'>
+    
+    <div class="row">
+      <div class="col-25">
+        <label for="hub">Hub</label>
+      </div>
+      <div class="col-75">
+        <select id="hub" name="hub">
+          <option value="jerusalem">Jerusalem</option>
+          <option value="nazareth">Nazareth</option>
+          <option value="meetx">MEETX</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="message">Confession - Message: </label>
+      </div>
+      <div class="col-75">
+        <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
